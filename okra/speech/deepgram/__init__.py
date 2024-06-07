@@ -1,0 +1,2 @@
+from .deepgram_speech_to_text import DeepgramSpeechToText
+from .deepgram_text_to_speech import DeepgramTextToSpeech
