@@ -146,7 +146,11 @@ options:
   --skip-intro  skip intro
   --no-music    do not play intro music
 ```
-By default, okra will play an intro cutscene and music [^1] (just for fun, lol). If you want to skip this intro, run `python okra.py --skip-intro`. If you just want to mute the music, run `python okra.py --no-music`. Have fun!
+By default, okra will play an intro cutscene and music [^1] (just for fun, lol). If you want to skip this intro, run `python okra.py --skip-intro`. If you just want to mute the music, run `python okra.py --no-music`. 
+
+To exit the assistant, type 'q' and press enter in the terminal.
+
+Have fun!
 
 ## License
 MIT
