@@ -50,8 +50,9 @@ To install, do the following:
    # Linux
    python3 -m pip install -r requirements.txt
    ```
-4. Edit the config.py file to your liking. The default configuration uses `gemini-1.5-flash` as the llm, `groq` as the speech-to-text provider, and `deepgram` as the text-to-speech provider:
+4. Edit the `okra/config.py` file to your liking. The default configuration uses `gemini-1.5-flash` as the llm, `groq` as the speech-to-text provider, and `deepgram` as the text-to-speech provider:
    ```python
+   # okra/config.py
    config: GlobalConfig = {
         # Make this False if you don't want to use vision,
         # or the model that you use does not support it
@@ -81,7 +82,7 @@ To install, do the following:
    ```
 
 ## Options
-You can edit the `config.py` file to change the behavior of okra to your liking. You have access to:
+You can edit the `okra/config.py` file to change the behavior of okra to your liking. You have access to:
 - 3 LLM classes found in `okra.llm` subpackage:
    - `Gemini`
    - `GPT`
@@ -99,7 +100,7 @@ You can edit the `config.py` file to change the behavior of okra to your liking.
 - Text-to-speech: Deepgram
 - Vision source: screen
 ```python
-# config.py
+# okra/config.py
 config: GlobalConfig = {
     "use_vision": True,
     "talk": True,
@@ -119,7 +120,7 @@ config: GlobalConfig = {
 - Text-to-speech: OpenAI
 - No vision
 ```python
-# config.py
+# okra/config.py
 config: GlobalConfig = {
     "use_vision": False, # Groq does not support vision models (yet)
     "talk": True,
