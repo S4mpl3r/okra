@@ -1,5 +1,11 @@
-from .llm import Gemini, GroqLLM
-from .speech import DeepgramTextToSpeech, GroqSpeechToText
+from .llm import GPT, Gemini, GroqLLM
+from .speech import (
+    DeepgramSpeechToText,
+    DeepgramTextToSpeech,
+    GroqSpeechToText,
+    OpenAISpeechToText,
+    OpenAITextToSpeech,
+)
 from .types import GlobalConfig, Monitor, VoiceRecorderConfig
 
 
@@ -12,6 +18,7 @@ def get_global_config(system_prompt: str) -> GlobalConfig:
         "llm": Gemini(
             model_name="models/gemini-1.5-flash-latest",
             system_prompt=system_prompt,
+            max_history_length=10,
         ),
         "speech_to_text": GroqSpeechToText(),
         "text_to_speech": DeepgramTextToSpeech(),

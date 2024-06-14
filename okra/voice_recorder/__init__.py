@@ -69,6 +69,7 @@ class VoiceRecorder:
     def start_listening(
         self, callback: Callable[[Recognizer, AudioData, Status], None]
     ) -> Callable[[bool], None]:
+        """Start listening for user's speech in the background"""
         with ConsoleManager.status(
             "[green]Adjusting for ambient noise...", spinner="dots4", speed=2
         ) as _:

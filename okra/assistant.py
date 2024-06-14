@@ -36,7 +36,7 @@ class Assistant:
     ) -> None:
         rms = audioop.rms(audio_data.get_raw_data(), audio_data.sample_width)
         # if it was quiet then return
-        if rms < recognizer.energy_threshold * 0.8:
+        if rms < recognizer.energy_threshold:
             return
         try:
             status.update(

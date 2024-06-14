@@ -109,7 +109,7 @@ def main(skip_intro: bool = False, skip_music: bool = False):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Okra is your all in one desktop AI voice assistant.",
-        usage="Usage: python okra.py [options]",
+        usage="python okra.py [options]",
     )
 
     parser.add_argument("--skip-intro", action="store_true", help="skip intro")
