@@ -110,7 +110,7 @@ config: GlobalConfig = {
         system_prompt=system_prompt,
         max_history_length=10,
     ),
-    "speech_to_text": DeepgramTextToSpeech(),
+    "speech_to_text": DeepgramSpeechToText(),
     "text_to_speech": DeepgramTextToSpeech(),
 }
 ```
